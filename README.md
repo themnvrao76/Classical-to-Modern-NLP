@@ -1,18 +1,18 @@
-# Classical to Modern NLP
+<h1 align="center">Classical to Modern NLP</h1>
 
 <p align="center">
-  <strong>A PyTorch journey through the architectures and ideas that shaped Natural Language Processing.</strong>
+  <strong>A PyTorch reference for the architectures and ideas that shaped Natural Language Processing.</strong>
 </p>
 
 <p align="center">
-  From word representations and recurrent networks to Transformers, pretrained language models, retrieval, PEFT, and modern LLM systems.
+  From word embeddings and recurrent networks to Transformers, pretrained language models, retrieval, PEFT, and modern LLM systems.
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/PyTorch-NLP-EE4C2C?logo=pytorch&logoColor=white" alt="PyTorch">
-  <img src="https://img.shields.io/badge/Methods-1-2563EB" alt="Methods">
-  <img src="https://img.shields.io/badge/Papers-Original%20Sources-16A34A" alt="Papers">
-  <img src="https://img.shields.io/badge/Status-Active-22C55E" alt="Status">
+  <img src="https://img.shields.io/badge/PyTorch-NLP-orange?logo=pytorch&logoColor=white" alt="PyTorch">
+  <img src="https://img.shields.io/badge/Methods-1-blue" alt="Methods">
+  <img src="https://img.shields.io/badge/Papers-Original%20Sources-green" alt="Papers">
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen" alt="Status">
 </p>
 
 ---
