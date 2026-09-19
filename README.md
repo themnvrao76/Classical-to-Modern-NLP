@@ -9,10 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/PyTorch-NLP-orange?logo=pytorch&logoColor=white" alt="PyTorch">
-  <img src="https://img.shields.io/badge/Methods-1-blue" alt="Methods">
-  <img src="https://img.shields.io/badge/Papers-Original%20Sources-green" alt="Papers">
-  <img src="https://img.shields.io/badge/Status-Active-brightgreen" alt="Status">
+  <strong>PyTorch</strong> · <strong>1 implemented method</strong> · <strong>Original papers</strong> · <strong>Active development</strong>
 </p>
 
 ---
