@@ -24,6 +24,7 @@ The focus is on readable implementations of historically influential and practic
 
 | Model / Method | Year | Parameters | Original Paper | Implementation |
 |---|---:|---:|---|---|
+| Word2Vec Skip-gram + Negative Sampling | 2013 | Depends on vocabulary / embedding size | [Distributed Representations of Words and Phrases and their Compositionality](https://arxiv.org/abs/1310.4546) | [`models/word2vec_skipgram.py`](models/word2vec_skipgram.py) |
 
 ## Planned Coverage
 
