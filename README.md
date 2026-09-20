@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <strong>PyTorch</strong> · <strong>1 implemented method</strong> · <strong>Original papers</strong> · <strong>Active development</strong>
+  <strong>PyTorch</strong> · <strong>2 implemented methods</strong> · <strong>Original papers</strong> · <strong>Active development</strong>
 </p>
 
 ---
@@ -60,6 +60,7 @@ The aim is to provide a compact reference for understanding **how modern languag
 | Model / Method | Year | Parameters | Original Paper | Implementation |
 |---|---:|---:|---|---|
 | **Word2Vec — Skip-gram + Negative Sampling** | 2013 | Vocabulary-dependent | [Distributed Representations of Words and Phrases and their Compositionality](https://arxiv.org/abs/1310.4546) | [`models/word2vec_skipgram.py`](models/word2vec_skipgram.py) |
+| **GloVe — Global Vectors for Word Representation** | 2014 | 6,020,000 (10k vocab, 300d demo) | [GloVe: Global Vectors for Word Representation](https://aclanthology.org/D14-1162/) | [`models/glove.py`](models/glove.py) |
 
 > Parameter counts refer to the implementations in this repository. Methods whose size depends on vocabulary, embedding dimension, or runtime configuration are marked accordingly.
 
@@ -76,7 +77,7 @@ pip install torch
 Run an implementation directly:
 
 ```bash
-python models/word2vec_skipgram.py
+python models/glove.py
 ```
 
 ---
