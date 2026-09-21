@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <strong>PyTorch</strong> · <strong>3 implemented methods</strong> · <strong>Original papers</strong> · <strong>Active development</strong>
+  <strong>PyTorch</strong> · <strong>4 implemented methods</strong> · <strong>Original papers</strong> · <strong>Active development</strong>
 </p>
 
 ---
@@ -40,12 +40,13 @@ The aim is to provide a compact reference for understanding **how modern languag
 
 ## Evolution of NLP
 
-> **Distributed representations** → **Subword representations** → **Recurrent networks** → **Seq2Seq** → **Attention** → **Transformer** → **Pretraining** → **Large language models** → **Retrieval & parameter-efficient adaptation**
+> **Recurrent sequence models** → **Distributed representations** → **Subword representations** → **Seq2Seq** → **Attention** → **Transformer** → **Pretraining** → **Large language models** → **Retrieval & parameter-efficient adaptation**
 
 | Era | Key Development | Why It Mattered |
 |---|---|---|
+| 1990–2014 | Elman RNN, LSTM, GRU | Recurrent hidden state made neural sequence modeling practical |
 | 2013–2016 | Word2Vec, GloVe, FastText | Dense word vectors and morphology-aware subword representations |
-| 2014–2016 | LSTM, GRU, Seq2Seq | Neural sequence modeling and translation |
+| 2014–2016 | Seq2Seq | End-to-end neural sequence transduction and translation |
 | 2015–2017 | Neural Attention | Dynamic focus over input sequences |
 | 2017 | Transformer | Replaced recurrence with self-attention |
 | 2018–2019 | ELMo, GPT, BERT | Large-scale language-model pretraining |
@@ -59,6 +60,7 @@ The aim is to provide a compact reference for understanding **how modern languag
 
 | Model / Method | Year | Parameters | Original Paper | Implementation |
 |---|---:|---:|---|---|
+| **Elman RNN — Simple Recurrent Network** | 1990 | 8,083,728 (10k vocab, 256d embedding, 512 hidden demo) | [Finding Structure in Time](https://doi.org/10.1207/s15516709cog1402_1) | [`models/rnn.py`](models/rnn.py) |
 | **Word2Vec — Skip-gram + Negative Sampling** | 2013 | Vocabulary-dependent | [Distributed Representations of Words and Phrases and their Compositionality](https://arxiv.org/abs/1310.4546) | [`models/word2vec_skipgram.py`](models/word2vec_skipgram.py) |
 | **GloVe — Global Vectors for Word Representation** | 2014 | 6,020,000 (10k vocab, 300d demo) | [GloVe: Global Vectors for Word Representation](https://aclanthology.org/D14-1162/) | [`models/glove.py`](models/glove.py) |
 | **FastText — Subword Skip-gram** | 2016 | 66,000,000 (10k vocab, 300d, 200k-bucket demo) | [Enriching Word Vectors with Subword Information](https://aclanthology.org/Q17-1010/) | [`models/fasttext.py`](models/fasttext.py) |
@@ -78,7 +80,7 @@ pip install torch
 Run an implementation directly:
 
 ```bash
-python models/fasttext.py
+python models/rnn.py
 ```
 
 ---
@@ -88,7 +90,7 @@ python models/fasttext.py
 The repository will grow chronologically while covering the major branches of modern NLP.
 
 **Foundations**  
-Word2Vec → GloVe → FastText → RNN → LSTM → GRU
+Elman RNN → Word2Vec → GloVe → FastText → LSTM → GRU
 
 **Sequence-to-Sequence & Attention**  
 Seq2Seq → Bahdanau Attention → Transformer
@@ -130,5 +132,5 @@ Implementations in this repository aim to be:
 Every implemented architecture or method is linked to its original paper or primary technical source in the table above.
 
 <p align="center">
-  <strong>From distributed word representations to modern large language model systems.</strong>
+  <strong>From recurrent sequence models and distributed representations to modern large language model systems.</strong>
 </p>
