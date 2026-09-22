@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <strong>PyTorch</strong> · <strong>5 implemented methods</strong> · <strong>Original papers</strong> · <strong>Active development</strong>
+  <strong>PyTorch</strong> · <strong>6 implemented methods</strong> · <strong>Original papers</strong> · <strong>Active development</strong>
 </p>
 
 ---
@@ -45,8 +45,8 @@ The aim is to provide a compact reference for understanding **how modern languag
 | Era | Key Development | Why It Mattered |
 |---|---|---|
 | 1990–1997 | Elman RNN, LSTM | Recurrent state followed by gated memory for learning longer dependencies |
-| 2013–2016 | Word2Vec, GloVe, FastText | Dense word vectors and morphology-aware subword representations |
-| 2014–2016 | Seq2Seq, GRU | End-to-end neural sequence transduction and compact gated recurrence |
+| 2013–2016 | Word2Vec, GloVe, GRU, FastText | Dense vectors, compact gated recurrence, and morphology-aware representations |
+| 2014–2016 | Seq2Seq | End-to-end neural sequence transduction |
 | 2015–2017 | Neural Attention | Dynamic focus over input sequences |
 | 2017 | Transformer | Replaced recurrence with self-attention |
 | 2018–2019 | ELMo, GPT, BERT | Large-scale language-model pretraining |
@@ -64,6 +64,7 @@ The aim is to provide a compact reference for understanding **how modern languag
 | **LSTM — Long Short-Term Memory** | 1997 | 9,264,912 (10k vocab, 256d embedding, 512 hidden demo) | [Long Short-Term Memory](https://www.bioinf.jku.at/publications/older/2604.pdf) | [`models/lstm.py`](models/lstm.py) |
 | **Word2Vec — Skip-gram + Negative Sampling** | 2013 | Vocabulary-dependent | [Distributed Representations of Words and Phrases and their Compositionality](https://arxiv.org/abs/1310.4546) | [`models/word2vec_skipgram.py`](models/word2vec_skipgram.py) |
 | **GloVe — Global Vectors for Word Representation** | 2014 | 6,020,000 (10k vocab, 300d demo) | [GloVe: Global Vectors for Word Representation](https://aclanthology.org/D14-1162/) | [`models/glove.py`](models/glove.py) |
+| **GRU — Gated Recurrent Unit** | 2014 | 8,871,184 (10k vocab, 256d embedding, 512 hidden demo) | [Learning Phrase Representations using RNN Encoder–Decoder](https://arxiv.org/abs/1406.1078) | [`models/gru.py`](models/gru.py) |
 | **FastText — Subword Skip-gram** | 2016 | 66,000,000 (10k vocab, 300d, 200k-bucket demo) | [Enriching Word Vectors with Subword Information](https://aclanthology.org/Q17-1010/) | [`models/fasttext.py`](models/fasttext.py) |
 
 > Parameter counts refer to the implementations in this repository. Methods whose size depends on vocabulary, embedding dimension, bucket size, or runtime configuration are marked accordingly.
@@ -81,7 +82,7 @@ pip install torch
 Run an implementation directly:
 
 ```bash
-python models/lstm.py
+python models/gru.py
 ```
 
 ---
