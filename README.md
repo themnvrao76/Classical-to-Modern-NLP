@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <strong>PyTorch</strong> · <strong>9 implemented methods</strong> · <strong>Original papers</strong> · <strong>Active development</strong>
+  <strong>PyTorch</strong> · <strong>10 implemented methods</strong> · <strong>Original papers</strong> · <strong>Active development</strong>
 </p>
 
 ---
@@ -40,7 +40,7 @@ The aim is to provide a compact reference for understanding **how modern languag
 
 ## Evolution of NLP
 
-> **Recurrent sequence models** → **Gated memory** → **Distributed representations** → **Subword representations** → **Seq2Seq** → **Attention** → **Transformer** → **Pretraining** → **Large language models** → **Retrieval & parameter-efficient adaptation**
+> **Recurrent sequence models** → **Gated memory** → **Distributed representations** → **Subword representations** → **Seq2Seq** → **Attention** → **Transformer** → **Contextual pretraining** → **Large language models** → **Retrieval & parameter-efficient adaptation**
 
 | Era | Key Development | Why It Mattered |
 |---|---|---|
@@ -49,7 +49,8 @@ The aim is to provide a compact reference for understanding **how modern languag
 | 2014 | Seq2Seq | End-to-end neural sequence transduction with separate encoder and decoder recurrent networks |
 | 2014–2015 | Bahdanau Attention | Learned soft alignment let the decoder dynamically retrieve relevant encoder states instead of relying on one fixed context vector |
 | 2017 | Transformer | Replaced recurrence with parallel multi-head self-attention, positional encoding, and feed-forward blocks |
-| 2018–2019 | ELMo, GPT, BERT | Large-scale language-model pretraining |
+| 2018 | ELMo | Deep bidirectional language models produced context-sensitive token representations from character-aware inputs |
+| 2018–2019 | GPT, BERT | Large-scale Transformer language-model pretraining |
 | 2019–2020 | GPT-2, RoBERTa, T5, BART | Scaling and unified text-to-text learning |
 | 2020–2022 | Dense retrieval, scaling, instruction methods | Stronger retrieval and general-purpose language models |
 | 2021–present | LoRA, RAG, MoE, modern LLM components | Efficient adaptation and scalable LLM systems |
@@ -69,6 +70,7 @@ The aim is to provide a compact reference for understanding **how modern languag
 | **Bahdanau Attention — Additive Neural Attention** | 2014 | 24,292,112 (10k source/target vocab, 256d embedding, 512 hidden/attention, 2-layer demo) | [Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/abs/1409.0473) | [`models/bahdanau_attention.py`](models/bahdanau_attention.py) |
 | **FastText — Subword Skip-gram** | 2016 | 66,000,000 (10k vocab, 300d, 200k-bucket demo) | [Enriching Word Vectors with Subword Information](https://aclanthology.org/Q17-1010/) | [`models/fasttext.py`](models/fasttext.py) |
 | **Transformer — Encoder–Decoder Self-Attention** | 2017 | 59,508,496 (10k source/target vocab, 512d, 8 heads, 6+6 layers demo) | [Attention Is All You Need](https://arxiv.org/abs/1706.03762) | [`models/transformer.py`](models/transformer.py) |
+| **ELMo — Deep Contextualized Word Representations** | 2018 | 8,016,996 (10k vocab, 512d token representation, 2-layer BiLSTM demo) | [Deep contextualized word representations](https://aclanthology.org/N18-1202/) | [`models/elmo.py`](models/elmo.py) |
 
 > Parameter counts refer to the implementations in this repository. Methods whose size depends on vocabulary, embedding dimension, bucket size, or runtime configuration are marked accordingly.
 
@@ -85,7 +87,7 @@ pip install torch
 Run an implementation directly:
 
 ```bash
-python models/transformer.py
+python models/elmo.py
 ```
 
 ---
@@ -101,7 +103,7 @@ Elman RNN → LSTM → Word2Vec → GloVe → GRU → FastText
 Seq2Seq ✓ → Bahdanau Attention ✓ → Transformer ✓
 
 **Pretrained Language Models**  
-ELMo → GPT → BERT → GPT-2 → RoBERTa → ALBERT → XLNet → Transformer-XL
+ELMo ✓ → GPT → BERT → GPT-2 → RoBERTa → ALBERT → XLNet → Transformer-XL
 
 **Text-to-Text & Efficient Transformers**  
 T5 → BART → ELECTRA → DistilBERT
