@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <strong>PyTorch</strong> · <strong>12 implemented methods</strong> · <strong>Original papers</strong> · <strong>Active development</strong>
+  <strong>PyTorch</strong> · <strong>13 implemented methods</strong> · <strong>Original papers</strong> · <strong>Active development</strong>
 </p>
 
 ---
@@ -73,6 +73,7 @@ The aim is to provide a compact reference for understanding **how modern languag
 | **ELMo — Deep Contextualized Word Representations** | 2018 | 8,016,996 (10k vocab, 512d token representation, 2-layer BiLSTM demo) | [Deep contextualized word representations](https://aclanthology.org/N18-1202/) | [`models/elmo.py`](models/elmo.py) |
 | **GPT — Generative Pre-Training** | 2018 | 100,807,680 (40k vocab, 512-token context, 768d, 12 heads, 12 layers demo) | [Improving Language Understanding by Generative Pre-Training](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf) | [`models/gpt.py`](models/gpt.py) |
 | **BERT — Bidirectional Encoder Representations from Transformers** | 2018 | 109,514,298 (BERT-Base: 30,522 vocab, 768d, 12 heads, 12 layers) | [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805) | [`models/bert.py`](models/bert.py) |
+| **GPT-2 — Language Models are Unsupervised Multitask Learners** | 2019 | 124,439,808 (GPT-2 small: 50,257 vocab, 1024 context, 768d, 12 heads, 12 layers) | [Language Models are Unsupervised Multitask Learners](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf) | [`models/gpt2.py`](models/gpt2.py) |
 
 > Parameter counts refer to the implementations in this repository. Methods whose size depends on vocabulary, embedding dimension, bucket size, or runtime configuration are marked accordingly.
 
@@ -89,7 +90,7 @@ pip install torch
 Run an implementation directly:
 
 ```bash
-python models/bert.py
+python models/gpt2.py
 ```
 
 ---
@@ -105,7 +106,7 @@ Elman RNN → LSTM → Word2Vec → GloVe → GRU → FastText
 Seq2Seq ✓ → Bahdanau Attention ✓ → Transformer ✓
 
 **Pretrained Language Models**  
-ELMo ✓ → GPT ✓ → BERT ✓ → GPT-2 → RoBERTa → ALBERT → XLNet → Transformer-XL
+ELMo ✓ → GPT ✓ → BERT ✓ → GPT-2 ✓ → RoBERTa → ALBERT → XLNet → Transformer-XL
 
 **Text-to-Text & Efficient Transformers**  
 T5 → BART → ELECTRA → DistilBERT
