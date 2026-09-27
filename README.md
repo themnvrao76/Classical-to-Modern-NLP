@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <strong>PyTorch</strong> · <strong>10 implemented methods</strong> · <strong>Original papers</strong> · <strong>Active development</strong>
+  <strong>PyTorch</strong> · <strong>11 implemented methods</strong> · <strong>Original papers</strong> · <strong>Active development</strong>
 </p>
 
 ---
@@ -71,6 +71,7 @@ The aim is to provide a compact reference for understanding **how modern languag
 | **FastText — Subword Skip-gram** | 2016 | 66,000,000 (10k vocab, 300d, 200k-bucket demo) | [Enriching Word Vectors with Subword Information](https://aclanthology.org/Q17-1010/) | [`models/fasttext.py`](models/fasttext.py) |
 | **Transformer — Encoder–Decoder Self-Attention** | 2017 | 59,508,496 (10k source/target vocab, 512d, 8 heads, 6+6 layers demo) | [Attention Is All You Need](https://arxiv.org/abs/1706.03762) | [`models/transformer.py`](models/transformer.py) |
 | **ELMo — Deep Contextualized Word Representations** | 2018 | 8,016,996 (10k vocab, 512d token representation, 2-layer BiLSTM demo) | [Deep contextualized word representations](https://aclanthology.org/N18-1202/) | [`models/elmo.py`](models/elmo.py) |
+| **GPT — Generative Pre-Training** | 2018 | 100,807,680 (40k vocab, 512-token context, 768d, 12 heads, 12 layers demo) | [Improving Language Understanding by Generative Pre-Training](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf) | [`models/gpt.py`](models/gpt.py) |
 
 > Parameter counts refer to the implementations in this repository. Methods whose size depends on vocabulary, embedding dimension, bucket size, or runtime configuration are marked accordingly.
 
@@ -87,7 +88,7 @@ pip install torch
 Run an implementation directly:
 
 ```bash
-python models/elmo.py
+python models/gpt.py
 ```
 
 ---
@@ -103,7 +104,7 @@ Elman RNN → LSTM → Word2Vec → GloVe → GRU → FastText
 Seq2Seq ✓ → Bahdanau Attention ✓ → Transformer ✓
 
 **Pretrained Language Models**  
-ELMo ✓ → GPT → BERT → GPT-2 → RoBERTa → ALBERT → XLNet → Transformer-XL
+ELMo ✓ → GPT ✓ → BERT → GPT-2 → RoBERTa → ALBERT → XLNet → Transformer-XL
 
 **Text-to-Text & Efficient Transformers**  
 T5 → BART → ELECTRA → DistilBERT
