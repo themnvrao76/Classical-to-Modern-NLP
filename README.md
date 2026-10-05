@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <strong>PyTorch</strong> · <strong>13 implemented methods</strong> · <strong>Original papers</strong> · <strong>Active development</strong>
+  <strong>PyTorch</strong> · <strong>26 implementation files</strong> · <strong>Original papers</strong> · <strong>Active development</strong>
 </p>
 
 ---
@@ -70,10 +70,23 @@ The aim is to provide a compact reference for understanding **how modern languag
 | **Bahdanau Attention — Additive Neural Attention** | 2014 | 24,292,112 (10k source/target vocab, 256d embedding, 512 hidden/attention, 2-layer demo) | [Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/abs/1409.0473) | [`models/bahdanau_attention.py`](models/bahdanau_attention.py) |
 | **FastText — Subword Skip-gram** | 2016 | 66,000,000 (10k vocab, 300d, 200k-bucket demo) | [Enriching Word Vectors with Subword Information](https://aclanthology.org/Q17-1010/) | [`models/fasttext.py`](models/fasttext.py) |
 | **Transformer — Encoder–Decoder Self-Attention** | 2017 | 59,508,496 (10k source/target vocab, 512d, 8 heads, 6+6 layers demo) | [Attention Is All You Need](https://arxiv.org/abs/1706.03762) | [`models/transformer.py`](models/transformer.py) |
+| **Mixture-of-Experts — Sparse Routed FFN** | 2017 | Config-dependent | [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](https://arxiv.org/abs/1701.06538) | [`models/mixture_of_experts.py`](models/mixture_of_experts.py) |
 | **ELMo — Deep Contextualized Word Representations** | 2018 | 8,016,996 (10k vocab, 512d token representation, 2-layer BiLSTM demo) | [Deep contextualized word representations](https://aclanthology.org/N18-1202/) | [`models/elmo.py`](models/elmo.py) |
 | **GPT — Generative Pre-Training** | 2018 | 100,807,680 (40k vocab, 512-token context, 768d, 12 heads, 12 layers demo) | [Improving Language Understanding by Generative Pre-Training](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf) | [`models/gpt.py`](models/gpt.py) |
 | **BERT — Bidirectional Encoder Representations from Transformers** | 2018 | 109,514,298 (BERT-Base: 30,522 vocab, 768d, 12 heads, 12 layers) | [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805) | [`models/bert.py`](models/bert.py) |
 | **GPT-2 — Language Models are Unsupervised Multitask Learners** | 2019 | 124,439,808 (GPT-2 small: 50,257 vocab, 1024 context, 768d, 12 heads, 12 layers) | [Language Models are Unsupervised Multitask Learners](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf) | [`models/gpt2.py`](models/gpt2.py) |
+| **Transformer-XL — Segment Recurrence + Relative Attention** | 2019 | Config-dependent | [Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context](https://arxiv.org/abs/1901.02860) | [`models/transformer_xl.py`](models/transformer_xl.py) |
+| **Sentence-BERT — Sentence Embeddings** | 2019 | Config-dependent | [Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks](https://arxiv.org/abs/1908.10084) | [`models/sentence_bert.py`](models/sentence_bert.py) |
+| **XLNet — Permutation Language Modeling** | 2019 | Config-dependent | [XLNet: Generalized Autoregressive Pretraining for Language Understanding](https://arxiv.org/abs/1906.08237) | [`models/xlnet.py`](models/xlnet.py) |
+| **RoBERTa — Robustly Optimized BERT Pretraining** | 2019 | Config-dependent | [RoBERTa: A Robustly Optimized BERT Pretraining Approach](https://arxiv.org/abs/1907.11692) | [`models/roberta.py`](models/roberta.py) |
+| **ALBERT — Parameter-Sharing Transformer Encoder** | 2019 | Config-dependent | [ALBERT: A Lite BERT for Self-supervised Learning of Language Representations](https://arxiv.org/abs/1909.11942) | [`models/albert.py`](models/albert.py) |
+| **DistilBERT — Distilled Transformer Encoder** | 2019 | Config-dependent | [DistilBERT, a distilled version of BERT](https://arxiv.org/abs/1910.01108) | [`models/distilbert.py`](models/distilbert.py) |
+| **Modern LLM Components — RMSNorm, RoPE, GQA, KV Cache** | 2019–2023 | Config-dependent | [RMSNorm](https://arxiv.org/abs/1910.07467) · [RoPE](https://arxiv.org/abs/2104.09864) · [GQA](https://arxiv.org/abs/2305.13245) | [`models/modern_llm_components.py`](models/modern_llm_components.py) |
+| **T5 — Text-to-Text Transfer Transformer** | 2020 | Config-dependent | [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/abs/1910.10683) | [`models/t5.py`](models/t5.py) |
+| **BART — Denoising Seq2Seq Pretraining** | 2020 | Config-dependent | [BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation](https://arxiv.org/abs/1910.13461) | [`models/bart.py`](models/bart.py) |
+| **RAG — Retrieval-Augmented Generation** | 2020 | Config-dependent | [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401) | [`models/rag.py`](models/rag.py) |
+| **ELECTRA — Replaced Token Detection** | 2020 | Config-dependent | [ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators](https://arxiv.org/abs/2003.10555) | [`models/electra.py`](models/electra.py) |
+| **LoRA — Low-Rank Adaptation** | 2021 | Config-dependent | [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685) | [`models/lora.py`](models/lora.py) |
 
 > Parameter counts refer to the implementations in this repository. Methods whose size depends on vocabulary, embedding dimension, bucket size, or runtime configuration are marked accordingly.
 
@@ -106,16 +119,16 @@ Elman RNN → LSTM → Word2Vec → GloVe → GRU → FastText
 Seq2Seq ✓ → Bahdanau Attention ✓ → Transformer ✓
 
 **Pretrained Language Models**  
-ELMo ✓ → GPT ✓ → BERT ✓ → GPT-2 ✓ → RoBERTa → ALBERT → XLNet → Transformer-XL
+ELMo ✓ → GPT ✓ → BERT ✓ → GPT-2 ✓ → RoBERTa ✓ → ALBERT ✓ → XLNet ✓ → Transformer-XL ✓
 
 **Text-to-Text & Efficient Transformers**  
-T5 → BART → ELECTRA → DistilBERT
+T5 ✓ → BART ✓ → ELECTRA ✓ → DistilBERT ✓
 
 **Representation & Adaptation**  
-Sentence-BERT → contrastive sentence learning → adapters → LoRA
+Sentence-BERT ✓ → contrastive sentence learning → adapters → LoRA ✓
 
 **Retrieval & Modern LLM Systems**  
-Dense retrieval → RAG → RoPE → RMSNorm → grouped-query attention → KV caching → Mixture-of-Experts
+Dense retrieval ✓ → RAG ✓ → RoPE ✓ → RMSNorm ✓ → grouped-query attention ✓ → KV caching ✓ → Mixture-of-Experts ✓
 
 ---
 
