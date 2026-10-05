@@ -23,14 +23,15 @@ class Encoder(nn.Module):
 
 class ELECTRA(nn.Module):
     def __init__(self, vocab_size=30522, generator_hidden=256, discriminator_hidden=768,
-                 generator_layers=4, discriminator_layers=12):
+                 generator_layers=4, discriminator_layers=12,
+                 generator_heads=4, discriminator_heads=12):
         super().__init__()
         self.generator = Encoder(
-            vocab_size, generator_hidden, generator_layers, 4, generator_hidden * 4
+            vocab_size, generator_hidden, generator_layers, generator_heads, generator_hidden * 4
         )
         self.generator_head = nn.Linear(generator_hidden, vocab_size)
         self.discriminator = Encoder(
-            vocab_size, discriminator_hidden, discriminator_layers, 12, discriminator_hidden * 4
+            vocab_size, discriminator_hidden, discriminator_layers, discriminator_heads, discriminator_hidden * 4
         )
         self.discriminator_head = nn.Linear(discriminator_hidden, 1)
 
@@ -55,6 +56,8 @@ if __name__ == "__main__":
         discriminator_hidden=256,
         generator_layers=2,
         discriminator_layers=4,
+        generator_heads=4,
+        discriminator_heads=8,
     )
     ids = torch.randint(0, 10000, (2, 24))
     out = model(ids, ids)
